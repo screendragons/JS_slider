@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+/*.mySlides {display:none;}*/
+</style>
+<body>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="langlaufenbig.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="skiingbig.jpg" style="width:100%">
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="snowboardingbig.jpg" style="width:100%">
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = x.length
+  }
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+
+// var i = 0;
+  // var images = [];
+  // var time = 1000;
+
+  // // Images
+  // images[0] = 'langlaufing.png';
+  // images[1] = 'skiing.png';
+  // images[2] = 'snowboarding.jpg';
+
+  // function slider(){
+  //   document.slide.src = images[i];
+
+  //   if(i < images.length - 1)
+  //   {
+  //     i++
+  //   } else {
+  //     i = 0;
+  //   }
+
+  // setTimeout("slider()". time);
+</script>
+
+</body>

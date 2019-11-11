@@ -1,74 +1,54 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-/*.mySlides {display:none;}*/
-</style>
-<body>
+  <head>
+    <!-- CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- The sliders, which are the images-->
+    <div class="slidershow-container">
+      <div class="slider-item fade">
+        <div class="number">1 / 3</div>
+          <img src="images/langlaufen.jpg" style="width:100%; display:block;">
+        </div>
+      </div>
+    </div>
 
-<div class="w3-content w3-display-container">
+    <div class="slidershow-container">
+      <div class="slider-item fade">
+        <div class="number">2 / 3</div>
+          <img src="images/skiing.jpg" style="width:100%; display:block;">
+        </div>
+      </div>
+    </div>
 
-<div class="w3-display-container mySlides">
-  <img src="langlaufenbig.jpg" style="width:100%">
-</div>
+    <div class="slidershow-container">
+      <div class="slider-item fade">
+        <div class="number">3 / 3</div>
+          <img src="images/snowboarding.jpg" style="width:100%; display:block;">
+        </div>
+      </div>
+    </div>
 
-<div class="w3-display-container mySlides">
-  <img src="skiingbig.jpg" style="width:100%">
-</div>
+    <!-- Previous button for the previous slide -->
+      <div class="prev" onclick="plusIndex(-1)">
+        &#10094;
+      </div>
 
-<div class="w3-display-container mySlides">
-  <img src="snowboardingbig.jpg" style="width:100%">
-</div>
+    <!-- Next button for the next slide -->
+      <div class="next" onclick="plusIndex(+1)">
+        &#10095;
+      </div>
+    <br>
 
-<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+    <!-- The bulletpoints -->
+    <div class="dot_section" style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
-</div>
-
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-    slideIndex = x.length
-  }
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
-
-
-// var i = 0;
-  // var images = [];
-  // var time = 1000;
-
-  // // Images
-  // images[0] = 'langlaufing.png';
-  // images[1] = 'skiing.png';
-  // images[2] = 'snowboarding.jpg';
-
-  // function slider(){
-  //   document.slide.src = images[i];
-
-  //   if(i < images.length - 1)
-  //   {
-  //     i++
-  //   } else {
-  //     i = 0;
-  //   }
-
-  // setTimeout("slider()". time);
-</script>
-
-</body>
+    <!-- JavaScript file -->
+    <script src="js/my.js"></script>
+  </body>
+</html>

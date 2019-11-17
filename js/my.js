@@ -8,6 +8,7 @@ function plusIndex(increment)
 {
   showImage(slideIndex += increment);
 }
+
 // The currentSlide is is function for the bulletpoints
 //the slideIndex = the slideNumber, which means in the array,
 // if you click on the first one, you will get 0 and that's also the first slide
@@ -16,6 +17,7 @@ function currentSlide(slideNumber){
 }
 
 function showImage(n){
+  // the previous and next button
   // it picks all the images with that classname
   var slide = document.getElementsByClassName("slider-item");
 
